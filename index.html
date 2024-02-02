@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет магазин</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+</head>
+<body>
+    
+    
+
+    <header class="header_wrapper">
+        <div class="header_head">
+            <a href="">Помощь</a>
+            <span>|</span>
+            <a onclick="openModal()" >Войти</a>
+        </div>
+        
+        <div class="header_content" id="myHeader">
+            <a href="" class="header_logo">
+                <img src="img/LOgo-transformed.png" alt="logo">
+            </a>
+            <nav class="header_menu">
+                <a href="#" class="header_menu-item">Новинки</a>
+                <a href="#" class="header_menu-item">Мужчины</a>
+                <a href="#" class="header_menu-item">Женщины</a>
+                <a href="#" class="header_menu-item">Дети</a>
+            </nav>
+            <div class="header_icons">
+                <a href=""><img src="img/search.svg" alt="поиск"></a>
+                <a href=""><img src="img/heart.svg" alt="избранное"></a>
+                <div class="cart">
+                    <a href=""><img src="img/cart.svg" alt="корзина"></a>
+                    <div class="cart-count">0</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="about">
+            <h1 class="about_h1">о нас</h1>
+            <p class="about_text">Добро пожаловать в MB - Winter shop, Мы шьем одежду уже более 5 лет и стараемся следовать не только всем последним модным тенденциям, но еще и производить действительно удобные и практичные вещи по доступным ценам.
+
+                У нас ты получишь индивидуальный и авторский поход, рекомендации от сертифицированного стилиста и от швеи с 20-ти летним стажем.</p>
+            <a href="https://ru.wikipedia.org/wiki/Nike" class="button">Подробнее ></a>
+        </section>
+        <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true, "bgLazyLoad": 1   }'>
+            <div class="carousel-cell"><img src="img/3450513113_60_1.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="img/66456585.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="img/c14xx2sxwpir58m8ji6bwps1dlrav1hf.webp" alt=""></div>
+            <div class="carousel-cell"><img src="img/kurtka.webp" alt=""></div>
+            <div class="carousel-cell"><img src="img/yhmyu91v88tiayrsm7nl2jftbe9shtjl.jpg" alt=""></div>
+        </div>
+
+
+
+
+        <section class="products" id="part1">
+            <h2 class="products_h2">Популярное на этой неделе</h2>
+
+            <div class="products_items">
+                <div class="product">
+                    <img src="img/WEB1.jpg" alt="">
+                    <div class="product_description">
+                        <div>
+                            <div class="product_name">MB Jacket</div>
+                            <div class="product_price">3699 &#8381;</div>
+                        </div>
+                        <button class="button add-to-cart">В корзину</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="img/WEB2.jpg" alt="">
+                    <div class="product_description">
+                        <div>
+                            <div class="product_name"> MB winter hat</div>
+                            <div class="product_price">690  &#8381;</div>
+                        </div>
+
+                        <button class="button  add-to-cart">В корзину</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="img/WEB5.jpg" alt="">
+                    <div class="product_description">
+                        <div>
+                            <div class="product_name">MB scarf</div>
+                            <div class="product_price">649&#8381;</div>
+                        </div>
+                        <button class="button  add-to-cart">В корзину</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="img/WEB3.jpg" alt="">
+                    <div class="product_description">
+                        <div>
+                            <div class="product_name">MB scarf</div>
+                            <div class="product_price">649 &#8381;</div>
+                        </div>
+                        <button class="button  add-to-cart">В корзину</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="img/WEB4.jpg" alt="">
+                    <div class="product_description">
+                        <div>
+                            <div class="product_name">MB Jacket</div>
+                            <div class="product_price">3699 &#8381;</div>
+                        </div>
+                        <button class="button  add-to-cart">В корзину</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="img/WEB6.jpg" alt="">
+                    <div class="product_description">
+                        <div>
+                            <div class="product_name"> MB winter hat</div>
+                            <div class="product_price">590 &#8381;</div>
+                        </div>
+                        <button class="button  add-to-cart">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <div id="myModal" class="modal"> <!-- Модальное содержание -->
+            <div class="modal-content">
+                <!-- Заголовок -->
+                <div class="modal-header">
+                    <!-- Крестик для закрывания окна -->
+                    <span class="close" onclick="closeModal()">&times;</span> <!-- Текст заголовка -->
+
+                </div>
+                <div class="modal-header-logo">
+                    <img src="/images/logo.svg" alt="">
+                    <div>YOUR ACCOUNT FOR
+                        EVERYTHING MB - Winter shop</div>
+                </div>
+                <!-- Модальное основное содержимое -->
+                <div class="modal-body">
+                    <form action="#" id="feedback-form">
+
+                        <div class="feedback-form_content">
+
+                            <input type="text" class="input-box" placeholder="email" id="email">
+                            <input type="password" class="input-box" placeholder="password" id="phone">
+                            <div>Входя в систему, вы соглашаетесь с <a href="">Privacy Policy</a> и <a href="">Terms of
+                                    Use</a></div>
+                            <input type="submit" class="button" value="Отправить">
+                            <div>Еще не с нами? <a href="">Зарегистрироваться</a></div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+
+
+    
+    <footer class="footer">
+        <div class="footer_content">
+
+            <div class="footer_menu">
+
+                <nav class="footer_menu-column">
+                    <a href="">O MB - Winter shop</a>
+                    <a href="">Новости</a>
+                    <a href="">Карьера</a>
+                    <a href="">Инвесторы</a>
+                </nav>
+        <div class="footer_menu-icons">
+                    <a href=""><img src="img/twitter.svg" alt=""></a>
+                    <a href=""> <img src="img/facebook.svg" alt=""></a>
+                    <a href=""><img src="img/instagram.svg" alt=""></a>
+                    <a href=""><img src="img/youtube.svg" alt=""></a>
+                </div>
+            </div>
+
+            <div class="footer_about">© 2023 MB - Winter shop, Inc. All Rights Reserved</div>
+
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+    <!-- JavaScript -->
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+</body>
+</html>
